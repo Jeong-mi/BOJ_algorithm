@@ -1,6 +1,5 @@
 num = int(input())
 
-
 case =[]
 for i in range(num):
   words = input().split(' ') #['this', 'is', 'test]
