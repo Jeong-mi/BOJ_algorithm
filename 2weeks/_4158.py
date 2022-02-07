@@ -5,8 +5,8 @@ bCD = []
 count = 0
 while(True):
   count += 1
-  x = int(input())
-  if(str(x) == '0 0'):
+  x = input()
+  if(x == '0 0'):
     break
 
   if(count <= a):
@@ -15,8 +15,8 @@ while(True):
     bCD.append(int(x))
 
 result = 0
-for i in range(len(aCD)):
-  for k in range(len(bCD)):
+for i in range(a):
+  for k in range(b):
     if(aCD[i] == bCD[k]):
       result += 1
 print(result)
