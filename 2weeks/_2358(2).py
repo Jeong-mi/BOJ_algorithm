@@ -1,21 +1,32 @@
 import sys
-input = sys.stdin.readline
 
-n = int(input())
+n = int(sys.stdin.readline())
 
-xdots = set()
-ydots = set()
-for i in range(n):
-  x, y = map(int, input().split(' '))
-  xdots.add(x)
-  ydots.add(y) 
-print(xdots)
-print(ydots)
+dots = []
+for _ in range(n):
+  dot = tuple(map(int, sys.stdin.readline().split(' ')))
+  dots.append(dot)
 
+Xs = []
+Ys = []
 count = 0
 for i in range(n):
   for k in range(i+1, n):
-    if(xdots[i] == xdots[k] or ydots[i] == ydots[k]):
-      count += 1
-print(count)
+    if(dots[i][0] == dots[k][0]): #x좌표 같은지 확인 (y축에 평행)
+      if not dots[i][0] in Xs: #같다면 중복되지 않도록
+        Xs.append(dots[i][0])
+        count += 1
+      else:
+        continue
+    if(dots[i][1] == dots[k][1]): #y좌표 같은지 확인 (x축에 평행) 
+      if not dots[i][1] in Ys: #같다면 중복되지 않도록
+        Ys.append(dots[i][1])
+        count += 1
+      else:
+        continue
+    else:
+      continue
+print(Xs)
+print(Ys)
+print(count) 
   
