@@ -13,10 +13,8 @@ for i in range(n):
 result = 0
 for i in range(n):
   compare = i+1
-  while(compare <= n-1):
-    if(dots[i][0] == dots[compare][0]): #x좌표 같은지 확인 (y축에 평행)
-      result += 1
-    elif(dots[i][1] == dots[compare][1]): #y좌표 같은지 확인 (x축에 평행)
+  while(compare <= n-1): #y좌표 같은지 확인 (x축에 평행) #x좌표 같은지 확인 (y축에 평행)
+    if(dots[i][0] == dots[compare][0] or dots[i][1] == dots[compare][1]): 
       result += 1
     compare += 1
 print(result)
