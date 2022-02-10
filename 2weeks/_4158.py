@@ -1,24 +1,28 @@
-a,b= map(int , input().split(' '))
-aCD = []
-bCD = []
-
-count = 0
+import sys
+import math
 while(True):
-  count += 1
-  x = input()
-  if(x == '0 0'):
+  a,b= map(int , sys.stdin.readline().split())
+  if a== 0 and b == 0:
     break
+  aCD = [int(sys.stdin.readline()) for _ in range(a)]
+  bCD = [int(sys.stdin.readline()) for _ in range(b)]
 
-  if(count <= a):
-    aCD.append(int(x))
-  else:
-    bCD.append(int(x))
+  result = 0 #같은 숫자일 갯수
 
-result = 0
-for i in range(a):
-  for k in range(b):
-    if(aCD[i] == bCD[k]):
-      result += 1
+  for cd in bCD: #배열의 모든 요소 반복문
+    start = 0
+    end = a-1
+
+    while start <= end:
+      mid = math.ceil((start + end)/2)
+
+      if(aCD[mid] == cd):
+        result += 1
+        break
+      elif(aCD[mid] > cd):
+        end = mid - 1
+      elif(aCD[mid] < cd):
+        start = mid + 1
 print(result)
 
 
