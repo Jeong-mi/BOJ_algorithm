@@ -7,4 +7,3 @@ print(inp)
 if inp in works.keys():
   works[inp] += 1
 print(works)
- 

@@ -1,5 +1,6 @@
 import sys
 import math
+
 while(True):
   a,b= map(int , sys.stdin.readline().split())
   if a== 0 and b == 0:
@@ -9,7 +10,7 @@ while(True):
 
   result = 0 #같은 숫자일 갯수
 
-  for cd in bCD: #배열의 모든 요소 반복문
+  for cd in bCD: #배열의 모든 요소 반복
     start = 0
     end = a-1
 
