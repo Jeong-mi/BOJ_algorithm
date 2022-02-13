@@ -6,7 +6,7 @@ n, k = map(int, sys.stdin.readline().split(' '))
 #마지막에 붙는 개행문자 제거 후 ' '로 분리하기
 #그 후 문자열 배열을 정수형 배열로 변환하기
 locations = list(map(int, sys.stdin.readline().strip().split(' '))) 
-print(locations)
+
 dq = deque([i for i in range(1, n+1)]) #원형 큐로 구현하기
 lo = 0 #뽑으려는 위치값이 들어있는 k의 이터레이터
 cnt = 0 #총 이동 횟수
