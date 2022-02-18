@@ -16,3 +16,7 @@ result = sorted(list(a&b))
 print(len(result))
 for i in result:
   print(i)
+
+# 파이썬의 집합 자료형 set()을 사용
+# a와 b의 교집합을 & 기호를 사용해서 간단히 구할 수 있음
+#https://wikidocs.net/1015
