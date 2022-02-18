@@ -1,3 +1,4 @@
+#시간초과오류
 import sys
 
 n = int(sys.stdin.readline())

@@ -1,9 +1,23 @@
-from collections import defaultdict
 import sys
+lst = ['Re', 'Pt', 'Cc', 'Ea', 'Tb', 'Cm', 'Ex']
+bee = dict()
+for i in lst:
+    bee[i] = 0
+ 
+cnt = 0
+lines = sys.stdin.readlines()
 
-works = {'Re': 0, 'Pt': 0, 'Cc': 0, 'Ea': 0, 'Tb': 0, 'Cm': 0, 'Ex': 0}
-inp = input()
-print(inp)
-if inp in works.keys():
-  works[inp] += 1
-print(works)
+for line in lines:
+    txt = list(line.split())
+    for i in txt:
+        if i in lst:
+            bee[i] = bee.get(i, 0) + 1
+        cnt += 1
+ 
+for i in bee:
+    print(i, bee.get(i), '{:.2f}'.format(bee.get(i)/cnt))
+ 
+print('Total', cnt, '1.00')
+
+
+#출처: https://airzinc.tistory.com/entry/백준-9733-파이썬 [박상어 블로그]
