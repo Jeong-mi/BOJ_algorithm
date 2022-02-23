@@ -1,3 +1,5 @@
+#아직 못 품!!
+
 import sys
 
 n = int(sys.stdin.readline())
