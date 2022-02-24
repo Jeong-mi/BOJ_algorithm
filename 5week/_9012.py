@@ -1,5 +1,5 @@
 #아직 못 품!!
-
+# ( 개수와 )개수가 같다고 YES가 나오진 않는다..
 import sys
 
 n = int(sys.stdin.readline())
@@ -26,3 +26,4 @@ for i in range(n):
 
 for i in range(n):
   print(result[i])
+
