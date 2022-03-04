@@ -13,7 +13,7 @@ for _ in range(n):
     
   else:       #원소가 0이라면
     if len(heap): #만약 빈 배열이 아니라면
-      max_item = heapq.heappop(heap)[1]
+      max_item = heapq.heappop(heap)[1] #heappop을 하면 최댓값이 반환된다, 실제 원소값은 튜플의 두번째자리이므로 [1]
       print('출력:', end=" ")
       print(max_item)
       
