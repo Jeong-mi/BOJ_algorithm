@@ -10,8 +10,9 @@ for i in range(1, n+1):
   pokemon = input().strip() #개행문자 제거해주기
   book_number[pokemon] = i
   book_pokemon[i] = pokemon
-#book_pokemon = {1: 'Bulbasaur', 2: 'Ivysaur', ...}
 #book_number = {'Bulbasaur': 1, 'Ivysaur': 2, ...}
+#book_pokemon = {1: 'Bulbasaur', 2: 'Ivysaur', ...}
+
 
 for _ in range(m):
   s = input().strip() # 개행문자 제거해주기
